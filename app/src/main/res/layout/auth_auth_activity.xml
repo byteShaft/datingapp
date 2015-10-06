@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/auth_container"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="matrix"
+                android:id="@+id/imageView_UrlBackground"
+                android:layout_alignParentTop="false"
+                android:layout_alignParentLeft="false"
+                android:layout_alignParentStart="true" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/SKProgressBarLarge"
+        android:layout_marginRight="5dp"
+        android:layout_above="@+id/password"
+        android:layout_marginBottom="100dp"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/siteName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textSize="35sp"
+                android:layout_alignParentTop="true"
+                android:textColor="#fff"
+                android:layout_marginTop="40dp"
+                android:layout_alignRight="@+id/password"
+                android:shadowColor="#666666"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:inputType="textEmailAddress"
+                android:ems="10"
+                android:id="@+id/email"
+                android:background="@drawable/rounded_corners_top"
+                android:textColor="#999"
+                android:textSize="20sp"
+                android:layout_above="@+id/password"
+                android:layout_centerHorizontal="true"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:width="320dp"
+                android:hint="@string/prompt_email"
+                android:visibility="gone" />
+
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:id="@+id/password"
+                android:background="@drawable/rounded_corners_bottom"
+                android:layout_above="@+id/sign_in_button"
+                android:layout_marginBottom="25dp"
+                android:textColor="#999"
+                android:textSize="20sp"
+                android:layout_centerHorizontal="true"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:width="320dp"
+                android:hint="@string/prompt_password"
+                android:visibility="gone" />
+
+
+            <Button
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:layout_alignRight="@+id/password"
+                android:text="@string/base_sign_in_label"
+                android:id="@+id/sign_in_button"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="75dp"
+                android:background="@drawable/auth_auth_rounded_corners_sign_in"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#ff9900"
+                android:visibility="gone" />
+
+            <com.facebook.widget.LoginButton
+                xmlns:fb="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/authButton"
+                android:layout_width="140dp"
+                android:layout_height="52dp"
+                android:layout_marginBottom="74dp"
+                android:layout_gravity="center_horizontal"
+                fb:login_text="@string/fb_login_button_label"
+                android:layout_alignLeft="@+id/password"
+                android:textSize="22sp"
+                android:layout_alignParentBottom="true"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:id="@+id/changeSite"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:text="@string/change_site_button_label"
+                android:gravity="center"
+                android:layout_alignParentBottom="true"
+                android:background="#22ffffff"
+                android:textColor="#ffffff"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                android:shadowColor="#666666"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2" />
+
+    <LinearLayout
+        android:id="@+id/auth_progress_bar"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:background="#ffffffff">
+    </LinearLayout>
+    <ProgressBar
+        android:id="@+id/initialPBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/SKProgressBarLarge"
+        android:layout_centerInParent="true"
+        />
+</RelativeLayout>
+
+

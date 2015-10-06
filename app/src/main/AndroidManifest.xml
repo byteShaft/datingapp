@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mydatingapp">
+
+    <application
+        android:name="com.mydatingapp.core.SkApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic"
+        android:label="@string/app_name"
+        android:theme="@style/SkTheme" >
+        <activity
+            android:name="com.mydatingapp.ui.profile.AlbumListViewActivity"
+            android:exported="true"
+            android:label="@string/album_view_activity_title">
+        </activity>
+        <activity
+            android:name="com.mydatingapp.ui.profile.PhotoListManageActivity"
+            android:exported="true"
+            android:label="@string/album_view_activity_title">
+        </activity>
+        <activity
+            android:name="com.mydatingapp.ui.profile.AlbumPhotoListViewActivity"
+            android:exported="true"
+            android:label="@string/album_view_activity_title">
+        </activity>
+        <activity
+            android:name="com.mydatingapp.ui.base.MainFragmentActivity"
+            android:exported="true"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.mydatingapp.core.SkCommandExecutorService"
+            android:exported="false" >
+        </service>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <provider
+            android:name="com.mydatingapp.core.sqlite.SQLiteContentProvider"
+            android:authorities="com.mydatingapp"
+            android:exported="false"
+            android:syncable="true" />
+        <activity
+            android:name="com.mydatingapp.ui.memberships.SubscribeOrBuyActivity"
+            android:exported="true"
+            android:label="@string/subscribe_or_buy_title">
+        </activity>
+        <activity
+            android:name="com.mydatingapp.ui.memberships.MembershipAndCreditsActivity"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name="com.mydatingapp.ui.memberships.CreditsActivity"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name="com.mydatingapp.ui.memberships.MembershipsActivity"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name="com.mydatingapp.ui.profile.SubscribePhotoAdd"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name="com.mydatingapp.ui.profile.ProfileViewActivity"
+            android:exported="true"
+            android:label="@string/profile_view_activity_title">
+        </activity>
+        <activity
+            android:name="com.mydatingapp.ui.profile.PhotoViewActivity"
+            android:exported="true"
+            android:label="@string/title_activity_main_fragment" >
+        </activity>
+        <activity
+            android:name="com.mydatingapp.ui.search.FilterActivity"
+            android:exported="true"
+            android:label="@string/search_result_filter_activity_title" >
+        </activity>
+        <activity
+            android:name="com.mydatingapp.ui.search.EditProfileActivity"
+            android:exported="true"
+            android:label="@string/edit_profile_form_title" >
+        </activity>
+        <activity
+            android:name="com.mydatingapp.ui.memberships.MembershipDetailsActivity"
+            android:exported="true"
+            android:label="@string/membership_details_activity_label" >
+        </activity>
+        <activity
+            android:name="com.mydatingapp.ui.memberships.CreditActionsActivity"
+            android:exported="true"
+            android:label="@string/credits_cost_of_actions_title" >
+        </activity>
+
+        <activity
+            android:name="com.mydatingapp.ui.speedmatch.SpeedmatchesFilterActivity"
+            android:label="@string/speedmatches_filter_bar_title">
+        </activity>
+        <activity
+            android:name="com.mydatingapp.ui.auth.AuthActivity"
+            android:exported="true"
+            android:theme="@style/SkThemeNoActionBar">
+        </activity>
+        <activity
+            android:name="com.mydatingapp.ui.auth.UrlActivity"
+            android:exported="true"
+            android:theme="@style/SkThemeNoActionBar">
+        </activity>
+        <activity
+            android:name="com.mydatingapp.ui.base.StatusActivity"
+            android:exported="true"
+            android:label="@string/suspended_activity_title" >
+        </activity>
+        <activity
+            android:name="com.mydatingapp.ui.fbconnect.FacebookLoginStepManager"
+            android:label="@string/fbconnect_first_step_title">
+        </activity>
+        <activity
+            android:name="com.mydatingapp.ui.mailbox.chat.ChatActivity">
+        </activity>
+        <activity
+            android:name="com.mydatingapp.ui.mailbox.mail.MailActivity">
+        </activity>
+        <activity
+            android:name="com.mydatingapp.ui.mailbox.compose.ComposeActivity">
+        </activity>
+        <activity
+            android:name="com.mydatingapp.ui.mailbox.reply.ReplyActivity">
+        </activity>
+        <activity
+            android:name="com.mydatingapp.ui.mailbox.attachment_viewer.AttachmentViewerActivity">
+            android:exported="true"
+        </activity>
+        <activity
+            android:theme="@style/SkThemeNoActionBar"
+            android:name="com.mydatingapp.ui.hot_list.HotListView">
+        </activity>
+        <!--activity
+            android:name="com.skadatex.ui.speedmatch.SpeedmatchesFilterActivity"
+            android:label="@string/title_activity_speedmatches_filter" >
+        </activity-->
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/app_id" />
+        <activity android:name="com.facebook.LoginActivity"
+            android:theme="@style/SkThemeNoActionBar"/>
+    </application>
+
+    <uses-sdk android:minSdkVersion="16"
+        android:targetSdkVersion="22" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!--
+     To retrieve OAuth 2.0 tokens or invalidate tokens to disconnect a user. This disconnect
+     option is required to comply with the Google+ Sign-In developer policies
+    -->
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+
+    <!-- To retrieve the account name (email) as part of sign-in: -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <uses-permission android:name="com.android.vending.CHECK_LICENSE" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+</manifest>
