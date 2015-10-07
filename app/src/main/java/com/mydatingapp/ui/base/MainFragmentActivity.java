@@ -8,7 +8,6 @@ import android.support.v4.view.GravityCompat;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.mydatingapp.R;
 import com.mydatingapp.core.SkApplication;

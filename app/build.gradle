@@ -5,7 +5,7 @@ android {
     buildToolsVersion "19.1"
     defaultConfig {
         applicationId "com.byteshaft.mydatingapp"
-        minSdkVersion 16
+        minSdkVersion 19
         targetSdkVersion 22
         versionCode 6
         versionName "2.0"

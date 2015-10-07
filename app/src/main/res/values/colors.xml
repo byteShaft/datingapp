@@ -16,5 +16,6 @@
     <!-- Mailbox -->
     <color name="mailbox_message_background">#f0f0f0</color>
     <color name="mailbox_author_background">#fa7564</color>
+    <color name="background_holo_dark">#000000</color>
     <!-- End -->
 </resources>
