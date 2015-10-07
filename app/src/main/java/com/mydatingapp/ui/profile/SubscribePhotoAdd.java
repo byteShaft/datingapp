@@ -10,10 +10,6 @@ import com.mydatingapp.R;
 import com.mydatingapp.ui.base.SkBaseInnerActivity;
 import com.mydatingapp.ui.memberships.SubscribeOrBuyActivity;
 
-/**
- * Created by jk on 4/6/15.
- */
-
 public class SubscribePhotoAdd extends SkBaseInnerActivity {
 
     String pluginKey = null;
